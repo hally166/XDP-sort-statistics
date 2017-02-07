@@ -1,4 +1,4 @@
-#XDP sort statisitics extractor
+#XDP sort statistics extractor
 Copyright (c) 2017 Genome Research Ltd.
 Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
 http://www.sanger.ac.uk/science/groups/cytometry-core-facility
