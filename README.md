@@ -12,11 +12,15 @@ The XDP server runs an unpatched, ancient version of Windows XP embedded.  Do no
 
 ##INSTRUCTIONS
 Map the 'Logs' folder on the server to the workstation.
+
 In 'Windows Explore' click 'Tools' and 'Map Network Drive...'
+
 Type in '\\192.168.0.1\Thor\Logs\'
-username=.\XDP_console
-password=password
+
+username=.\XDP_console, password=password
+
 Run the script from anywhere on the workstation and enter the date you want to recover using 2 digit names.  i.e. 01
+
 The script will create a file that contains the sort stats for that day.
 
 ##TROUBLESHOOTING
