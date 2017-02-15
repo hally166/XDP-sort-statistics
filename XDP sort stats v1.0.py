@@ -1,7 +1,7 @@
 #Copyright (c) 2017 Genome Research Ltd.
 
 #XDP sort statisitics extractor
-#v1.0 Sept 2017
+#v1.1 Feb 2017
 #Python 3.6 (2016)
 #Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
 
