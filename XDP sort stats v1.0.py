@@ -1,7 +1,7 @@
 #Copyright (c) 2017 Genome Research Ltd.
 
 #XDP sort statisitics extractor
-#v1.0 Sept 2017
+#v1.1 Feb 2017
 #Python 3.6 (2016)
 #Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
 
@@ -52,3 +52,18 @@ for item in sortlist:
 sortfile = open('sort_statistics.txt', 'w')
 for item in editedlist:
   sortfile.write("%s\n" % item)
+
+#Displays the sort information in the python window
+print('\n\n')
+date=month+"/"+day+"/"+year
+with open('sort_statistics.txt') as f:
+	for line in f:
+		if date in line:
+			print (line,)
+		if 'Events fully processed:' in line:
+			print (line,)
+		if 'Sorted events:' in line:
+			print (line,)
+
+print ('Press enter to close.\n\nA sort_statistics.txt file has been created with more information' )
+input()
