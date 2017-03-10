@@ -1,6 +1,9 @@
 #XDP sort statistics extractor
+
 Copyright (c) 2017 Genome Research Ltd.
+
 Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
+
 http://www.sanger.ac.uk/science/groups/cytometry-core-facility
 
 The BD Influx has a very useful feature that automatically saves sort statistics for every run.  The XDP does not and if a user forgets, loses a print out or we accidently clear the stats (especially the total events) all the sort data is lost.  However the XDP does save this information on the server!  This script will extract this data and present it as a text file containing the sort statistics for each run on a given day.
