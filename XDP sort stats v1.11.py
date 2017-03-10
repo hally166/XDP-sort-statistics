@@ -1,7 +1,7 @@
 #Copyright (c) 2017 Genome Research Ltd.
 
 #XDP sort statisitics extractor
-#v1.1 Feb 2017
+#v1.11 Feb 2017
 #Python 3.6 (2016)
 #Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
 
@@ -42,16 +42,17 @@ for item in z:
    if 'Run Counts and Rates' in item:
         sortlist.append(item)
 
-#This removes our drop delay calibration.  i.e. 100 drops per drop, change this to your specific scheme
+#This removes our drop delay calibration.  i.e. 100 drops per slide, change this to your specific scheme, or remove it
 editedlist=[]
 for item in sortlist:
    if 'Sorted events: stream 2 events: 100' not in item:
         editedlist.append(item)
 
-#Creats a new sort_statistics file in the directory that this script is contained in
+#Creates a new sort_statistics file in the directory that this script is contained in
 sortfile = open('sort_statistics.txt', 'w')
 for item in editedlist:
   sortfile.write("%s\n" % item)
+sortfile.close()
 
 #Displays the sort information in the python window
 print('\n\n')
