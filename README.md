@@ -24,7 +24,10 @@ Run the script from anywhere on the workstation and enter the date you want to r
 The script will create a file that contains the sort stats for that day.
 
 ##TROUBLESHOOTING
-The sort stats only includ the information of the sort decisions.  So if you do a single well plate then the stats will not show the whole plate, just one event.
+
+There is a good chance that the time and date on the server is wrong.  Use Remote desktop connection, or the mouse and keyboard on the server to correct this.
+
+Plate sorts will show the final number of events ito the well.  The total events is the total events for the whole sort run.
 
 The sort time is the time that the sorting ended.
 
@@ -32,7 +35,4 @@ During morning drop delay set up we use 10x100 beads on a slide.  I have include
 
 If the script cannot find the correct file you can look at the network share, copy the 'RunStats...' file to the same folder as the script the add # to the start of lines 27-29 and remove the # from line 31 and replace the RunStats... name in this line with the actual one from the server.
 
-There is a good chance that the time and date on the server is wrong.  Use Remote desktop connection, or the mouse and keyboard on the server to correct this.
-
-If you run the script and the network drive isn't mapped then it will hang.  It will give up and close eventually.
-
+If you run the script and the network drive isn't mapped then it will hang.  It will give up eventually (1min) and close.
