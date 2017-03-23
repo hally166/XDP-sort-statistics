@@ -1,4 +1,4 @@
-#XDP sort statistics extractor
+# XDP sort statistics extractor
 
 Copyright (c) 2017 Genome Research Ltd.
 
@@ -10,10 +10,10 @@ The BD Influx has a very useful feature that automatically saves sort statistics
 
 This script opens a log file on the XDP server, extracts the sort statisitics and creats a new sort statisitic text file
 
-##CAUTION
+## CAUTION
 The XDP server runs an unpatched, ancient version of Windows XP embedded.  Do not map or access the machine from a PC that is comprimised by a virus or trojan etc.  Use an up to date version of Windows and a virus scanner to secure your workstaion.
 
-##INSTRUCTIONS
+## INSTRUCTIONS
 Map the 'Logs' folder on the server to the workstation.
 
 In 'Windows Explore' click 'Tools' and 'Map Network Drive...'
@@ -26,7 +26,7 @@ Run the script from anywhere on the workstation and enter the date you want to r
 
 The script will create a file that contains the sort stats for that day.
 
-##TROUBLESHOOTING
+## TROUBLESHOOTING
 
 There is a good chance that the time and date on the server is wrong.  Use Remote desktop connection, or the mouse and keyboard on the server to correct this.
 
