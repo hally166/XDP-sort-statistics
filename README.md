@@ -13,18 +13,13 @@ This script opens a log file on the XDP server, extracts the sort statisitics an
 ## CAUTION
 The XDP server runs an unpatched, ancient version of Windows XP embedded.  Do not map or access the machine from a PC that is comprimised by a virus or trojan etc.  Use an up to date version of Windows and a virus scanner to secure your workstaion.
 
+This script will automatically disconnect any drive mapped to the letter Z.  If you use this drive letter then change the drive letter used in the script before running it.
+
 ## INSTRUCTIONS
-Map the 'Logs' folder on the server to the workstation.
 
-In 'Windows Explore' click 'Tools' and 'Map Network Drive...'
+Run the script from anywhere on the workstation and enter the date you want to recover using 2 digit desciptors.  i.e. 01
 
-Type in '\\192.168.0.1\Thor\Logs\'
-
-username=.\XDP_console, password=password
-
-Run the script from anywhere on the workstation and enter the date you want to recover using 2 digit names.  i.e. 01
-
-The script will create a file that contains the sort stats for that day.
+View the stats then close the window and you will see a file that contains the sort stats for that day in ssame folder as the script.
 
 ## TROUBLESHOOTING
 
@@ -34,8 +29,4 @@ Plate sorts will show the final number of events ito the well.  The total events
 
 The sort time is the time that the sorting ended.
 
-During morning drop delay set up we use 10x100 beads on a slide.  I have included a loop in the script to remove these sorts.  If you do something different then please adjust this loop. You could also copy this loop to remove plate alignments or single cell sorts if you wish.
-
-If the script cannot find the correct file you can look at the network share, copy the 'RunStats...' file to the same folder as the script the add # to the start of lines 27-29 and remove the # from line 31 and replace the RunStats... name in this line with the actual one from the server.
-
-If you run the script and the network drive isn't mapped then it will hang.  It will give up eventually (1min) and close.
+During morning drop delay set up we use 10x100 beads on a slide.  I have included a loop in the script to remove these "sorts".  If you do something different then please adjust this loop. You could also copy this loop to remove plate alignments or single cell sorts if you wish.
