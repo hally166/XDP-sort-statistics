@@ -19,7 +19,7 @@ This script will automatically disconnect any drive mapped to the letter Z.  If 
 
 Run the script from anywhere on the workstation and enter the date you want to recover using 2 digit desciptors.  i.e. 01
 
-View the stats then close the window and you will see a file that contains the sort stats for that day in ssame folder as the script.
+View the stats in the python window then close the window and you will see two files that contains the sort stats for that day in same folder as the script.
 
 ## TROUBLESHOOTING
 
