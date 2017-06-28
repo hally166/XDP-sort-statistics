@@ -13,7 +13,7 @@ This script opens a log file on the XDP server, extracts the sort statisitics an
 ## CAUTION
 The XDP server runs an unpatched, ancient version of Windows XP embedded.  Do not map or access the machine from a PC that is comprimised by a virus or trojan etc.  Use an up to date version of Windows and a virus scanner to secure your workstaion.
 
-This script will automatically disconnect any drive mapped to the letter Z.  If you use this drive letter then change the drive letter used in the script before running it.
+This script will automatically disconnect any drive mapped to the letter Z.  If you use this drive letter then change the drive letter used in the script before running it.  Change the mapping and unmapping.
 
 ## INSTRUCTIONS
 
