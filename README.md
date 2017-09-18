@@ -13,7 +13,7 @@ This script opens a log file on the XDP server, extracts the sort statisitics an
 ## CAUTION
 The XDP server runs an unpatched, ancient version of Windows XP embedded.  Do not map or access the machine from a PC that is comprimised by a virus or trojan etc.  Use an up to date version of Windows and a virus scanner to secure your workstaion.
 
-This script will automatically disconnect any drive mapped to the letter Z.  If you use this drive letter then change the drive letter used in the script before running it.  Change the mapping and unmapping.
+This script will automatically disconnect any drive mapped to the letter Z.  If you use this drive letter then change the drive letter used in the script before running it.  Change the mapping and unmapping lines.
 
 ## INSTRUCTIONS
 
@@ -24,6 +24,8 @@ View the stats in the python window then close the window and you will see two f
 ## TROUBLESHOOTING
 
 There is a good chance that the time and date on the server is wrong.  Use Remote desktop connection, or the mouse and keyboard on the server to correct this.
+
+The server saves the final sort results for each sort.  If you 'clear' the sort results, either from the console or in the software, before the sort finishes then only the results after the clearance will be shown. 
 
 Plate sorts will show the final number of events ito the well.  The total events is the total events for the whole sort run.
 
