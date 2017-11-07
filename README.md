@@ -29,7 +29,7 @@ The server saves the final sort results for each sort.  If you 'clear' the sort 
 
 Plate sorts will show the final number of events ito the well.  The total events is the total events for the whole sort run.
 
-The sort time is the time that the sorting ended.
+The sort time is the time that the sort ended.
 
 During morning drop delay set up we use 10x100 beads on a slide.  I have included a loop in the script to remove these "sorts".  If you do something different then please adjust this loop. You could also copy this loop to remove plate alignments or single cell sorts if you wish.
 
