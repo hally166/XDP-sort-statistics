@@ -1,8 +1,8 @@
 #Copyright (c) 2017 Genome Research Ltd.
 
 #XDP sort statisitics extractor
-#v1.31 Jun 2017
-#Python 3.6 (2016)
+#v1.4 Nov 2017
+#Python 2.7 (2016)
 #Author : Christopher Hall, Wellcome Trust Sanger Institute, christopher.hall@sanger.ac.uk
 
 #This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
@@ -15,25 +15,38 @@
 #import dependancies
 from os import path
 import subprocess
+import glob
 
 #maps the XDP console server to the computer using Z as the drive letter
 subprocess.call(r'net use Z: /del', shell=True)
 subprocess.call(r'net use Z: \\192.168.0.1\Thor\Logs /user:XDP_Console password', shell=True)
+server= '\\\\192.168.0.1\\Thor\\Logs\\'
 
-#choose your date
-print ("This script will produce a file named 'sortstats' in this directory\nwhich will give you the sort statistics for a particular day\n\nWhich day of the month do you want to look at\ni.e 01, 10, 31.")
-day=input()
-print ("Which month do you want to look at\ni.e 01 = jan, 09 = sept, 12 = dec.")
-month=input()
-print ("Which year do you want to look at\ni.e 17 = 2017.")
-year=input()
+#today or another date?
+print ("Do you want today's sort statistics?")
+today=raw_input().lower()
+
+if today.startswith('y'):
+    filename = max(glob.iglob('\\\\192.168.0.1\\Thor\\Logs\\*.txt'), key=path.getctime)
+    datename = filename.split(' ')
+    date = str(datename[1])
+    day = str(date.split('_')[1])
+    month = str(date.split('_')[0])
+    year = str(date.split('_')[2])
+    year = str(year.split('.')[0])
+
+else:
+    #choose your date
+    print ("This script will produce a file named 'sortstats' in this directory\nwhich will give you the sort statistics for a particular day\n\nWhich day of the month do you want to look at\ni.e 01, 10, 31.")
+    day=raw_input()
+    print ("Which month do you want to look at\ni.e 01 = jan, 09 = sept, 12 = dec.")
+    month=raw_input()
+    print ("Which year do you want to look at\ni.e 17 = 2017.")
+    year=raw_input()
+    filename="RunStats "+month+"_"+day+"_"+year+".txt"
 
 #creates the filename and the path to the logfiles on the XDP
-filename="RunStats "+month+"_"+day+"_"+year+".txt"
-server= '\\\\192.168.0.1\\Thor\\Logs\\'
 xdp_console_log = open(path.join (server,filename),'r')
-
-#xdp_console_log=open(filename,'r')
 
 #process the file
 x=xdp_console_log.read()
@@ -145,4 +158,4 @@ file.close()
 stat_in.close()
 
 print ('\n\nA raw_statistics.txt file and a sort_statistics.csv file has been created\n\nPress enter to close' )
-input()
+raw_input()
