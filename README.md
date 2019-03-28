@@ -17,6 +17,8 @@ This script will automatically disconnect any drive mapped to the letter Z.  If 
 
 ## INSTRUCTIONS
 
+https://youtu.be/NJc3PsUD434
+
 Run the script from anywhere on the workstation and enter the date you want to recover using 2 digit desciptors.  i.e. 01
 
 View the stats in the python window then close the window and you will see two files that contains the sort stats for that day in same folder as the script.
@@ -33,4 +35,6 @@ The sort time is the time that the sort ended.
 
 During morning drop delay set up we use 10x100 beads on a slide.  I have included a loop in the script to remove these "sorts".  If you do something different then please adjust this loop. You could also copy this loop to remove plate alignments or single cell sorts if you wish.
 
-If the 'today's sort' feature is very slow then you probably have a large number of sort log files.  Try going into the log folder and archiving the old ones.
+If the 'today's sort' feature is slow then you probably have a large number of sort log files.  Try going into the log folder and archiving the old ones.
+
+The XDP server only has one spare USB slot. This means that one of your keyboard or mouse will need to be via an old connection using PS/2 (the purple/green round port). This is not a plug and play so you need your mouse or keyboard plugged in before you start the server.
